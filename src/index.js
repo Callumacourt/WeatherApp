@@ -1,1 +1,3 @@
-import getWeather from './fetchData';
+import getWeatherData, { processWeatherData } from './fetchData';
+
+getWeatherData('London');
