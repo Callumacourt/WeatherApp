@@ -1,3 +1,4 @@
-import getWeatherData, { processWeatherData } from './fetchData';
+import css from './style.css';
+import handleFormSubmit from './handleFormSubmit';
 
-getWeatherData('London');
+handleFormSubmit();
