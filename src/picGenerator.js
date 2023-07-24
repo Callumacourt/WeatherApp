@@ -1,11 +1,10 @@
-import sunny from './sunny.png';
-import partlyCloudy from './partlyCloudy.png';
-import rainy from './rain.png';
-import lightRain from './lightRain.png';
-import misty from './misty.png';
-import Overcast from './overcast.png';
-import Thunder from './thunderstorm.png';
-import thunderRain from './thunderRain.png';
+import sunny from './images/sunny.png';
+import partlyCloudy from './images/partlyCloudy.png';
+import rainy from './images/rain.png';
+import lightRain from './images/lightRain.png';
+import misty from './images/misty.png';
+import Overcast from './images/overcast.png';
+import Thunder from './images/thunderstorm.png';
 
 const decideWeatherPic = currentCondition => {
   let src;

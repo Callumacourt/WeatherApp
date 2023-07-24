@@ -1,6 +1,6 @@
 import getWeatherData from './fetchData';
 import createDataDivs from './createDataDivs';
-import image from './icons8-search-50.png';
+import image from './images/icons8-search-50.png';
 
 export default function initialisePage() {
   const submitImage = document.querySelector('.inputImage');
