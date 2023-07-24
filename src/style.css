@@ -1,2 +1,75 @@
 body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: darkslateblue;
+  color: white;
+}
+
+.body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  justify-content: center;
+}
+
+.form {
+  margin-top: 5vh;
+  width: 20vw;
+  display: grid;
+  align-items: center;
+  height: 3vh;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 3vw;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.form input {
+  border: none;
+  margin-left: 5px;
+  padding-left: 0.5vw;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.form input:focus {
+  outline: none;
+}
+
+.inputImage {
+  height: 2.5vh;
+  grid-row-start: 1;
+  grid-column-start: 2;
+}
+
+.container {
+  display: grid;
+  justify-items: center;
+  align-content: flex-start;
+}
+
+.country {
+  font-size: 5rem;
+}
+
+.region {
+  font-size: 2.5em;
+}
+
+.localtime,
+.current,
+.tempCelsius,
+.tempFahrenheit {
+  font-size: 1.5rem;
+}
+
+.pic {
+  height: 6vh;
 }

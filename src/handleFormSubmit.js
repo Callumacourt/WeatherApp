@@ -1,7 +1,6 @@
 import getWeatherData from './fetchData';
 import createDataDivs from './createDataDivs';
 
-const currentConditionDiv = document.querySelector('.current');
 const container = document.querySelector('.container');
 
 export default function handleFormSubmit() {
@@ -20,9 +19,8 @@ export default function handleFormSubmit() {
 
     try {
       const weatherData = await getWeatherData(inputValue);
+      console.log(weatherData);
       createDataDivs(weatherData);
-      const currentCondition = weatherData.current;
-      currentConditionDiv.innerHTML = currentCondition;
     } catch (error) {
       console.error(error);
     }
