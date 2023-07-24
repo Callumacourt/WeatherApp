@@ -1,4 +1,5 @@
 import picGenerator from './picGenerator';
+import unitSwitcher from './unitSwitcher';
 
 export default function createDataDivs(weatherData) {
   const container = document.querySelector('.container');
@@ -7,6 +8,9 @@ export default function createDataDivs(weatherData) {
     div.classList.add(key);
     if (key === 'tempCelsius') {
       div.innerHTML = `${value}°C`;
+    } else if (key === 'tempFahrenheit') {
+      div.innerHTML = `${value}F`;
+      div.style.display = 'none';
     } else {
       div.innerHTML = `${value}`;
     }
@@ -17,4 +21,12 @@ export default function createDataDivs(weatherData) {
   container.appendChild(weatherPicDiv);
   const currentCondition = weatherData.current;
   weatherPicDiv.src = picGenerator(currentCondition);
+
+  const unitSwitcherBtn = document.createElement('button');
+  unitSwitcherBtn.classList.add('unitSwitcherBtn');
+  unitSwitcher(unitSwitcherBtn);
+  unitSwitcherBtn.addEventListener('click', () => {
+    unitSwitcher(unitSwitcherBtn);
+  });
+  container.appendChild(unitSwitcherBtn);
 }

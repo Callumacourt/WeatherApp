@@ -73,3 +73,16 @@ body {
 .pic {
   height: 6vh;
 }
+
+.unitSwitcherBtn {
+  grid-row-start: 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 0.8vmin;
+  border-radius: 3vmin;
+}
