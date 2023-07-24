@@ -5,6 +5,9 @@ body {
   padding: 0;
   background-color: darkslateblue;
   color: white;
+  background-image: url(./images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .body {
@@ -12,6 +15,7 @@ body {
   display: grid;
   grid-template-rows: 1fr 2fr;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.09);
 }
 
 .form {
@@ -81,8 +85,7 @@ body {
   align-items: center;
   background-color: lightblue;
   color: black;
-  font-weight: bold;
+
   border: none;
   padding: 0.8vmin;
-  border-radius: 3vmin;
 }
