@@ -1,5 +1,6 @@
 import getWeatherData from './fetchData';
 import createDataDivs from './createDataDivs';
+import handleError from './handleError';
 
 const container = document.querySelector('.container');
 
@@ -19,10 +20,9 @@ export default function handleFormSubmit() {
 
     try {
       const weatherData = await getWeatherData(inputValue);
-      console.log(weatherData);
       createDataDivs(weatherData);
     } catch (error) {
-      console.error(error);
+      handleError(error);
     }
   });
 }
