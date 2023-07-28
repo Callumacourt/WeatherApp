@@ -10,18 +10,28 @@ export default function handleFormSubmit() {
   form.addEventListener('submit', async event => {
     event.preventDefault();
 
-    // Clear existing divs
-    while (container.firstChild) {
-      container.removeChild(container.firstChild);
-    }
-
     const inputElement = document.getElementById('location');
     const inputValue = inputElement.value;
 
     try {
+      // Fetch weather data
       const weatherData = await getWeatherData(inputValue);
-      createDataDivs(weatherData);
+
+      // Check if weatherData is valid
+      if (weatherData && Object.keys(weatherData).length > 0) {
+        // Clear existing divs
+        while (container.firstChild) {
+          container.removeChild(container.firstChild);
+        }
+
+        // Create new divs with weather data
+        createDataDivs(weatherData);
+      } else {
+        // Handle case where there is no weather data
+        console.log('No weather data found.');
+      }
     } catch (error) {
+      // Handle error
       handleError(error);
     }
   });
