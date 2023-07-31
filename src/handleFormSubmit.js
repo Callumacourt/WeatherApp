@@ -28,7 +28,6 @@ export default function handleFormSubmit() {
         createDataDivs(weatherData);
       } else {
         // Handle case where there is no weather data
-        console.log('No weather data found.');
       }
     } catch (error) {
       // Handle error

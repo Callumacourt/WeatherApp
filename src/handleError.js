@@ -3,6 +3,7 @@ export default function handleError(error) {
   const container = document.querySelector('.container');
   const errorDiv = document.createElement('div');
   const errorMessage = document.createElement('p');
+  errorDiv.classList.add('errorDiv');
   errorMessage.classList.add('errorMsg');
   container.appendChild(errorDiv);
   errorDiv.appendChild(errorMessage);

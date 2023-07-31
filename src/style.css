@@ -1,3 +1,4 @@
+/* Default styles for all devices */
 body {
   height: 100vh;
   width: 100vw;
@@ -23,6 +24,7 @@ body {
   width: 20vw;
   display: grid;
   align-items: center;
+
   height: 3vh;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 3vw;
@@ -51,6 +53,9 @@ body {
   height: 2.5vh;
   grid-row-start: 1;
   grid-column-start: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
@@ -94,9 +99,85 @@ input:hover {
   cursor: pointer;
 }
 
+.errorDiv {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  max-width: 90vw;
+}
+
 .errorMsg {
   color: black;
   font-weight: bold;
   font-size: 1.2rem;
-  font-style: italic;
+}
+
+.tempCelsius,
+.tempFahrenheit {
+  font-weight: bold;
+}
+
+/* Media query for phones/mobile devices */
+@media screen and (max-width: 768px) {
+  body {
+    /* Modify body styles for mobile devices here */
+    font-size: 16px; /* Adjust font size for better readability on smaller screens */
+    background-color: darkslategray; /* Change the background color for mobile devices */
+  }
+
+  .form {
+    /* Modify form styles for mobile devices here */
+    width: 80vw; /* Make the form wider to fit better on small screens */
+    height: 4vh;
+    grid-template-columns: 1fr; /* Remove the second grid column to stack elements */
+  }
+
+  .form input {
+    /* Modify form input styles for mobile devices here */
+    font-size: 1rem; /* Increase font size for better readability on smaller screens */
+  }
+
+  .inputImage {
+    /* Modify inputImage styles for mobile devices here */
+    height: 3.2vh; /* Adjust the height of the inputImage for better visibility */
+    margin-right: 2vmin;
+  }
+
+  .container {
+    /* Modify container styles for mobile devices here */
+    gap: 10px; /* Add some gap between elements to improve layout */
+  }
+
+  .country {
+    /* Modify country styles for mobile devices here */
+    font-size: 3rem; /* Reduce font size for better fit on smaller screens */
+  }
+
+  .region {
+    /* Modify region styles for mobile devices here */
+    font-size: 1.3em; /* Reduce font size for better fit on smaller screens */
+  }
+
+  .localtime,
+  .current,
+  .tempCelsius,
+  .tempFahrenheit {
+    /* Modify shared text styles for mobile devices here */
+    font-size: 1.2rem; /* Adjust font size for better readability on smaller screens */
+  }
+
+  .pic {
+    /* Modify pic styles for mobile devices here */
+    height: 8vh; /* Adjust the height of the pic for better visibility */
+  }
+
+  .unitSwitcherBtn {
+    /* Modify unitSwitcherBtn styles for mobile devices here */
+    width: 20vw; /* Make the button wider to fit better on small screens */
+    padding: 2vmin;
+  }
+
+  .errorMsg {
+    font-size: 0.89em; /* Adjust font size for better readability on smaller screens */
+  }
 }
