@@ -93,3 +93,10 @@ body {
 input:hover {
   cursor: pointer;
 }
+
+.errorMsg {
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-style: italic;
+}

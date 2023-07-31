@@ -32,7 +32,9 @@ export default function handleFormSubmit() {
       }
     } catch (error) {
       // Handle error
-      handleError(error);
+      if (!document.querySelector('.errorMsg')) {
+        handleError(error);
+      }
     }
   });
 }
