@@ -17,11 +17,6 @@ export default function createDataDivs(weatherData) {
     container.appendChild(div);
   });
 
-  const loadingIndicator = document.createElement('div');
-  loadingIndicator.classList.add('loadingIndicator');
-  loadingIndicator.textContent = 'Loading...';
-  container.appendChild(loadingIndicator);
-
   const weatherPicDiv = document.createElement('img');
   weatherPicDiv.classList.add('pic');
   container.appendChild(weatherPicDiv);
